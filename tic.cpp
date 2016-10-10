@@ -1,14 +1,11 @@
 #include<cstdio>
 #include<windows.h>
-#include<SDL2/SDL.h>
-#include<SDL2/SDL_keyboard.h>
-#include<SDL2/SDL_image.h>
 #include<iostream>
 #include<cstdlib>
 
 
 
-int main(int argc, char *argv[])
+int main()
 {
     int a[10],temp,i,j,f,rnd=0;
 
