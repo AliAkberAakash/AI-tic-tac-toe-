@@ -2,26 +2,35 @@
 #include<windows.h>
 #include<iostream>
 #include<cstdlib>
-
+#include<time.h>
 
 
 int main()
 {
-    int a[10],temp,i,j,f,rnd=0;
+    int a[10],temp,i,j,f=1,rnd=0;
+    time_t t;
+    bool p, brk=false, nothing=true,nothing2=true, player=false, computer=false, win=true;
 
-    bool p=true, brk=false, nothing=true, player=false, computer=false;
+    srand((unsigned) time(&t));
+
+    if(rand()%2)
+        {
+            p=true;
+            printf("Your turn first!\n");
+        }
+    else
+        {
+            p=false;
+            printf("Computers' turn first\n");
+        }
+
+        Sleep(1000);
 
     for(i=0; i<10; i++)
         a[i]=0;
 
 
     start:
-
-        if(player)
-        {
-            printf("Player wins\n");
-            goto finish;
-        }
 
     system("cls");
 
@@ -112,15 +121,22 @@ int main()
     printf(".          .          .          .\n");
     printf("..................................\n\n\n");
 
+    //winner declaration:
+
+        if(player)
+        {
+            printf("Player wins\n");
+            goto finish;
+        }
+        if(computer)
+        {
+            printf("I win\n");
+            goto finish;
+        }
+
+
+
     /**check if draw**/
-
-    f=0;
-
-    for(i=1; i<9; i++)
-    {
-        if(a[i]==0)
-            f=1;
-    }
 
     if(!f)
     {
@@ -141,6 +157,7 @@ int main()
             a[x]=1;
             p=false;
             nothing=true;
+            nothing2=true;
         }
 
         goto start;
@@ -168,6 +185,7 @@ int main()
                                 a[3]=2;
                                 p=true;
                                 nothing=false;
+                                nothing2=false;
                                 break;
                             }
                         }
@@ -179,6 +197,7 @@ int main()
                             a[2]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                         }
                     }
@@ -196,6 +215,7 @@ int main()
                             a[7]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                         }
@@ -207,6 +227,7 @@ int main()
                             a[4]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                         }
                     }
@@ -224,6 +245,7 @@ int main()
                             a[9]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                         }
@@ -235,6 +257,7 @@ int main()
                             a[5]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                         }
                     }
@@ -255,6 +278,7 @@ int main()
                                 a[1]=2;
                                 p=true;
                                 nothing=false;
+                                nothing2=false;
                                 break;
                             }
                         }
@@ -266,6 +290,7 @@ int main()
                             a[3]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                         }
                     }
@@ -281,6 +306,7 @@ int main()
                             a[8]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                         }
                     }
@@ -291,6 +317,7 @@ int main()
                             a[5]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                         }
                     }
@@ -312,6 +339,7 @@ int main()
                             a[1]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                         }
@@ -323,6 +351,7 @@ int main()
                             a[2]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                         }
                     }
@@ -340,6 +369,7 @@ int main()
                             a[9]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                         }
@@ -351,6 +381,7 @@ int main()
                             a[6]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                         }
                     }
@@ -368,6 +399,7 @@ int main()
                             a[7]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                         }
@@ -379,6 +411,7 @@ int main()
                             a[5]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                         }
                     }
@@ -399,6 +432,7 @@ int main()
                             a[6]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                         }
@@ -410,6 +444,7 @@ int main()
                             a[5]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                     }
@@ -427,6 +462,7 @@ int main()
                                 a[7]==2;
                                 p=true;
                                 nothing=false;
+                                nothing2=false;
                                 break;
                             }
                         }
@@ -438,6 +474,7 @@ int main()
                             a[1]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                     }
@@ -460,6 +497,7 @@ int main()
                             a[4]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                         }
@@ -478,6 +516,7 @@ int main()
                             a[1]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                         }
@@ -496,6 +535,7 @@ int main()
                             a[3]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                         }
@@ -514,6 +554,7 @@ int main()
                             a[2]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                         }
@@ -535,6 +576,7 @@ int main()
                             a[9]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                         }
@@ -546,6 +588,7 @@ int main()
                             a[8]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                     }
@@ -566,6 +609,7 @@ int main()
                             a[7]=2;
                             p=true;
                             nothing=false;
+                            nothing2=false;
                             break;
                             }
                         }
@@ -577,21 +621,633 @@ int main()
 
         if(nothing)
         {
-            for(i=1; i<10;i++)
+            for(i=1; i<=9; i++)
             {
-                if(a[i]==0)
+            if(a[i]==2)
+            {
+                if(i==1)
                 {
-                    a[i]=2;
-                    p=true;
-                    nothing=false;
-                    break;
+                    if(a[2]==2)
+                    {
+                        if(a[3]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[3]==0)
+                            {
+                                a[3]=2;
+                                p=true;
+                                nothing=false;
+                                nothing2=false;
+                                break;
+                            }
+                        }
+                    }
+                    if(a[3]==2)
+                    {
+                        if(a[2]==0)
+                        {
+                            a[2]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                    if(a[4]==2)
+                    {
+                        if(a[7]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[7]==0)
+                            {
+                            a[7]=2;
+                            p=true;
+                            nothing2=false;
+                            break;
+                            }
+                        }
+                    }
+                    if(a[7]==2)
+                    {
+                        if(a[4]==0)
+                        {
+                            a[4]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                    if(a[5]==2)
+                    {
+                        if(a[9]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[9]==0)
+                            {
+                            a[9]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                        }
+                    }
+                    if(a[9]==2)
+                    {
+                        if(a[5]==0)
+                        {
+                            a[5]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                }
+                if (i==2)
+                {
+                    if(a[3]==2)
+                    {
+                        if(a[1]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[1]==0)
+                            {
+                                a[1]=2;
+                                p=true;
+                                nothing=false;
+                                nothing2=false;
+                                break;
+                            }
+                        }
+                    }
+                    if(a[1]==2)
+                    {
+                        if(a[3]==0)
+                        {
+                            a[3]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                   if(a[5]==2)
+                    {
+                        if(a[8]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else if(a[8]==0)
+                        {
+                            a[8]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                   if(a[8]==2)
+                    {
+                        if(a[5]==0)
+                        {
+                            a[5]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+
+                }
+                if(i==3)
+                {
+                    if(a[2]==2)
+                    {
+                        if(a[1]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[1]==0)
+                            {
+                            a[1]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                        }
+                    }
+                    if(a[1]==2)
+                    {
+                        if(a[2]==0)
+                        {
+                            a[2]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                    if(a[6]==2)
+                    {
+                        if(a[9]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[9]==0)
+                            {
+                            a[9]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                        }
+                    }
+                    if(a[9]==2)
+                    {
+                        if(a[6]==0)
+                        {
+                            a[6]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                    if(a[5]==2)
+                    {
+                        if(a[7]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[7]==0)
+                            {
+                            a[7]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                        }
+                    }
+                    if(a[7]==2)
+                    {
+                        if(a[5]==0)
+                        {
+                            a[5]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                }
+                else if(i==4)
+                {
+                    if(a[5]==2)
+                    {
+                        if(a[6]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[6]==0)
+                            {
+                            a[6]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                        }
+                    }
+                    if(a[6]==2)
+                    {
+                        if(a[5]==0)
+                            {
+                            a[5]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                    }
+                    if(a[1]==2)
+                    {
+                        if(a[7]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[7]==0)
+                            {
+                                a[7]==2;
+                                p=true;
+                                nothing=false;
+                                nothing2=false;
+                                break;
+                            }
+                        }
+                    }
+                    if(a[7]==2)
+                    {
+                        if(a[1]==0)
+                            {
+                            a[1]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                    }
+
+                }
+
+                else if(i==5)
+                {
+                    if(a[6]==2)
+                    {
+                        if(a[4]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[4]==0)
+                            {
+                            a[4]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                        }
+                    }
+                    if(a[9]==2)
+                    {
+                        if(a[1]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[1]==0)
+                            {
+                            a[1]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                        }
+                    }
+                    if(a[7]==2)
+                    {
+                        if(a[3]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[3]==0)
+                            {
+                            a[3]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                        }
+                    }
+                    if(a[8]==2)
+                    {
+                        if(a[2]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[2]==0)
+                            {
+                            a[2]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                        }
+                    }
+                }
+                if(i==7)
+                {
+                    if(a[8]==2)
+                    {
+                        if(a[9]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[9]==0)
+                            {
+                            a[9]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                        }
+                    }
+                    if(a[9]==2)
+                    {
+                        if(a[8]==0)
+                            {
+                            a[8]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                    }
+                }
+                if(i==8)
+                {
+                    if(a[9]==2)
+                    {
+                        if(a[7]==2)
+                        {
+                            computer=true;
+                            break;
+                        }
+                        else
+                        {
+                            if(a[7]==0)
+                            {
+                            a[7]=2;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                            }
+                        }
+                    }
                 }
             }
 
         }
+
+        }
+
+        if(nothing2)
+        {
+            if(a[5]==0)
+            {
+                a[5]=2;
+                p=true;
+            }
+            else
+            {
+                for(i=1; i<=9; i++)
+                {
+                    if(a[i]==0)
+                    {
+                        a[i]=2;
+                        p=true;
+                        nothing=false;
+                        nothing2=false;
+                        break;
+                    }
+                }
+            }
+        }
     }
 
-    Sleep(100);
+
+    //win check for payer
+    for(i=1; i<=9; i++)
+    {
+        if(a[i]==1)
+        {
+            if(i==1)
+            {
+                if(a[2]==1&&a[3]==1)
+                {
+                player=true;
+                break;
+                }
+                if(a[4]==1&&a[7]==1)
+                {
+                player=true;
+                break;
+                }
+                if(a[5]==1&&a[9]==1)
+                {
+                player=true;
+                win=false;
+                break;
+                }
+           }
+           if(i==2)
+           {
+               if(a[5]==1&&a[8]==1)
+                {
+                player=true;
+                break;
+                }
+           }
+           if(i==3)
+           {
+               if(a[6]==1&&a[9]==1)
+                {
+                player=true;
+                break;
+                }
+                if(a[5]==1&&a[7]==1)
+                {
+                player=true;
+                break;
+                }
+           }
+           if(i==4)
+           {
+               if(a[5]==1&&a[6]==1)
+                {
+                player=true;
+                break;
+                }
+           }
+           if(i==7)
+           {
+               if(a[8]==1&&a[9]==1)
+                {
+                player=true;
+                break;
+                }
+           }
+
+        }
+    }
+
+    if(player)
+        goto start;
+
+
+    //win check for computer
+    for(i=1; i<=9; i++)
+    {
+        if(a[i]==2)
+        {
+            if(i==1)
+            {
+                if(a[2]==2&&a[3]==2)
+                {
+                computer=true;
+                break;
+                }
+                if(a[4]==2&&a[7]==2)
+                {
+                computer=true;
+                break;
+                }
+                if(a[5]==2&&a[9]==2)
+                {
+                computer=true;
+                win=false;
+                break;
+                }
+           }
+           if(i==2)
+           {
+               if(a[5]==2&&a[8]==2)
+                {
+                computer=true;
+                break;
+                }
+           }
+           if(i==3)
+           {
+               if(a[6]==2&&a[9]==2)
+                {
+                computer=true;
+                break;
+                }
+                if(a[5]==2&&a[7]==2)
+                {
+                computer=true;
+                break;
+                }
+           }
+           if(i==4)
+           {
+               if(a[5]==2&&a[6]==2)
+                {
+                computer=true;
+                break;
+                }
+           }
+           if(i==7)
+           {
+               if(a[8]==2&&a[9]==2)
+                {
+                computer=true;
+                break;
+                }
+           }
+
+        }
+    }
+    if(computer)
+        goto start;
+
+    //checking if draw
+
+    f=0;
+
+    for(i=1; i<=9; i++)
+    {
+        if(a[i]==0)
+            f=1;
+    }
+
+    Sleep(150);
 
     goto start;
 
