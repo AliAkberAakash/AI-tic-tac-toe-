@@ -160,6 +160,70 @@ int main()
             nothing2=true;
         }
 
+    //win check for payer
+    for(i=1; i<=9; i++)
+    {
+        if(a[i]==1)
+        {
+            if(i==1)
+            {
+                if(a[2]==1&&a[3]==1)
+                {
+                player=true;
+                break;
+                }
+                if(a[4]==1&&a[7]==1)
+                {
+                player=true;
+                break;
+                }
+                if(a[5]==1&&a[9]==1)
+                {
+                player=true;
+                win=false;
+                break;
+                }
+           }
+           if(i==2)
+           {
+               if(a[5]==1&&a[8]==1)
+                {
+                player=true;
+                break;
+                }
+           }
+           if(i==3)
+           {
+               if(a[6]==1&&a[9]==1)
+                {
+                player=true;
+                break;
+                }
+                if(a[5]==1&&a[7]==1)
+                {
+                player=true;
+                break;
+                }
+           }
+           if(i==4)
+           {
+               if(a[5]==1&&a[6]==1)
+                {
+                player=true;
+                break;
+                }
+           }
+           if(i==7)
+           {
+               if(a[8]==1&&a[9]==1)
+                {
+                player=true;
+                break;
+                }
+           }
+
+        }
+    }
         goto start;
 
     }
@@ -1099,76 +1163,6 @@ int main()
             }
         }
     }
-
-
-    //win check for payer
-    for(i=1; i<=9; i++)
-    {
-        if(a[i]==1)
-        {
-            if(i==1)
-            {
-                if(a[2]==1&&a[3]==1)
-                {
-                player=true;
-                break;
-                }
-                if(a[4]==1&&a[7]==1)
-                {
-                player=true;
-                break;
-                }
-                if(a[5]==1&&a[9]==1)
-                {
-                player=true;
-                win=false;
-                break;
-                }
-           }
-           if(i==2)
-           {
-               if(a[5]==1&&a[8]==1)
-                {
-                player=true;
-                break;
-                }
-           }
-           if(i==3)
-           {
-               if(a[6]==1&&a[9]==1)
-                {
-                player=true;
-                break;
-                }
-                if(a[5]==1&&a[7]==1)
-                {
-                player=true;
-                break;
-                }
-           }
-           if(i==4)
-           {
-               if(a[5]==1&&a[6]==1)
-                {
-                player=true;
-                break;
-                }
-           }
-           if(i==7)
-           {
-               if(a[8]==1&&a[9]==1)
-                {
-                player=true;
-                break;
-                }
-           }
-
-        }
-    }
-
-    if(player)
-        goto start;
-
 
     //win check for computer
     for(i=1; i<=9; i++)
