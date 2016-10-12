@@ -1,3 +1,11 @@
+/**
+line 152: player starts his move
+line 233: computer starts its' move
+line 159: input is taken
+line 134: Declaration of player wining
+line 139: Declaration of computer wining
+line 149: Declaration of match draw
+**/
 #include<cstdio>
 #include<windows.h>
 #include<iostream>
