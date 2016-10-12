@@ -229,7 +229,7 @@ int main()
     }
     else
     {
-        for(i=0; i<9; i++)
+        for(i=1; i<=9; i++)
         {
             if(a[i]==2)
             {
@@ -844,22 +844,277 @@ int main()
 
         if(nothing2)
         {
-            if(a[5]==0)
+            bool check=true;
+
+            for(i=1; i<=8; i++)
             {
+                if(a[i]==2)
+                {
+                    if(i==1)
+                    {
+                        if(a[2]==0&&a[3]==0)
+                        {
+                            a[3]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[4]==0&&a[7]==0)
+                        {
+                            a[7]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[5]==0&&a[9]==0)
+                        {
+                            a[9]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                    if(i==2)
+                    {
+                        if(a[1]==0&&a[3]==0)
+                        {
+                            a[3]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[5]==0&&a[8]==0)
+                        {
+                            a[8]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                    if(i==3)
+                    {
+                        if(a[1]==0&&a[2]==0)
+                        {
+                            a[1]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[6]==0&&a[9]==0)
+                        {
+                            a[9]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[5]==0&&a[7]==0)
+                        {
+                            a[7]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                    if(i==4)
+                    {
+                        if(a[1]==0&&a[7]==0)
+                        {
+                            a[7]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[5]==0&&a[6]==0)
+                        {
+                            a[6]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                    if(i==5)
+                    {
+                        if(a[2]==0&&a[8]==0)
+                        {
+                            a[8]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[4]==0&&a[6]==0)
+                        {
+                            a[4]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[1]==0&&a[9]==0)
+                        {
+                            a[9]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[3]==0&&a[7]==0)
+                        {
+                            a[7]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                    if(i==6)
+                    {
+                        if(a[3]==0&&a[9]==0)
+                        {
+                            a[3]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[4]==0&&a[5]==0)
+                        {
+                            a[5]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                    if(i==7)
+                    {
+                        if(a[1]==0&&a[4]==0)
+                        {
+                            a[1]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[5]==0&&a[3]==0)
+                        {
+                            a[3]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[8]==0&&a[9]==0)
+                        {
+                            a[9]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                    if(i==8)
+                    {
+                        if(a[7]==0&&a[9]==0)
+                        {
+                            a[9]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[2]==0&&a[5]==0)
+                        {
+                            a[5]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                    if(i==9)
+                    {
+                        if(a[7]==0&&a[8]==0)
+                        {
+                            a[8]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[6]==0&&a[3]==0)
+                        {
+                            a[3]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                        if(a[5]==0&&a[1]==0)
+                        {
+                            a[1]=2;
+                            check=false;
+                            p=true;
+                            nothing=false;
+                            nothing2=false;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if(check)
+            {
+                if(a[5]==0)
+                {
                 a[5]=2;
                 p=true;
-            }
-            else
-            {
-                for(i=1; i<=9; i++)
+                }
+                else
                 {
-                    if(a[i]==0)
+                    for(i=1; i<=9; i++)
                     {
+                        if(a[i]==0)
+                        {
                         a[i]=2;
                         p=true;
                         nothing=false;
                         nothing2=false;
                         break;
+                        }
                     }
                 }
             }
