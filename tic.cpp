@@ -7,7 +7,7 @@ line 139: Declaration of computer wining
 line 149: Declaration of match draw
 **/
 #include<cstdio>
-#include<windows.h>
+//#include<windows.h>
 #include<iostream>
 #include<cstdlib>
 #include<time.h>
@@ -32,7 +32,7 @@ int main()
             printf("Computers' turn first\n");
         }
 
-        Sleep(1000);
+        //Sleep(1000);
 
     for(i=0; i<10; i++)
         a[i]=0;
@@ -40,94 +40,149 @@ int main()
 
     start:
 
-    system("cls");
-
+    //system("cls");
+    system("clear");
     /**first row**/
-    printf("..................................\n");
-    printf(".          .          .          .\n");
-    printf(".          .          .          .\n");
+    //printf("..................................\n");
+    //printf(".          .          .          .\n");
+    //printf(".          .          .          .\n");
     if(a[1]==1)
-        printf(".  Player  ");
-    else if(a[1]==2)
-        printf(". Computer ");
-    else
-        printf(".1         ");
+    {
+        //printf(".  Player  ");
+        printf("p");
+    }
+    else if(a[1]==2) {
+        //printf(". Computer ");
+        printf("c");
+    }
+    else {
+        //printf(".1         ");
+        printf("n");
+    }
 
-    if(a[2]==1)
-        printf(".  Player  .");
-    else if(a[2]==2)
-        printf(". Computer .");
-    else
-        printf(".2         .");
+    if(a[2]==1) {
+        //printf(".  Player  ");
+        printf("p");
+    }
+    else if(a[2]==2) {
+        //printf(". Computer ");
+        printf("c");
+    }
+    else {
+        //printf(".2         .");
+        printf("n");
+    }
 
-    if(a[3]==1)
-        printf("  Player  .\n");
-    else if(a[3]==2)
-        printf(" Computer .\n");
-    else
-        printf("3         .\n");
+    if(a[3]==1) {
+       //printf(".  Player  \n");
+        printf("p");
+    }
+    else if(a[3]==2) {
+        //printf(". Computer ");
+        printf("c");
+    }
+    else {
+        //printf("3         .\n");
+        printf("n");
+    }
 
-    printf(".          .          .          .\n");
-    printf(".          .          .          .\n");
+    //printf(".          .          .          .\n");
+    //printf(".          .          .          .\n");
 
     /**second row**/
 
-    printf("..................................\n");
-    printf(".          .          .          .\n");
-    printf(".          .          .          .\n");
-    if(a[4]==1)
-        printf(".  Player  ");
-    else if(a[4]==2)
-        printf(". Computer ");
-    else
-        printf(".4         ");
+    //printf("..................................\n");
+    //printf(".          .          .          .\n");
+    //printf(".          .          .          .\n");
+    if(a[4]==1) {
+        //printf(".  Player  ");
+        printf("p");
+    }
+    else if(a[4]==2) {
+        //printf(". Computer ");
+        printf("c");
+    }
+    else {
+        //printf(".4         ");
+        printf("n");
+    }
 
-    if(a[5]==1)
-        printf(".  Player  .");
-    else if(a[5]==2)
-        printf(". Computer .");
-    else
-        printf(".5         .");
+    if(a[5]==1) {
+        //printf(".  Player  ");
+        printf("p");
+    }
+    else if(a[5]==2) {
+        //printf(". Computer ");
+        printf("c");
+    }
+    else {
+        //printf(".5         .");
+        printf("n");
+    }
 
-    if(a[6]==1)
-        printf("  Player  .\n");
-    else if(a[6]==2)
-        printf(" Computer .\n");
-    else
-        printf("6         .\n");
+    if(a[6]==1) {
+        //printf(".  Player  ");
+        printf("p");
+    }
+    else if(a[6]==2) {
+        //printf(". Computer ");
+        printf("c");
+    }
+    else {
+       // printf("6         .\n");
+       printf("n");
+    }
 
-    printf(".          .          .          .\n");
-    printf(".          .          .          .\n");
+    //printf(".          .          .          .\n");
+    //printf(".          .          .          .\n");
 
     /**third row**/
 
-    printf("..................................\n");
-    printf(".          .          .          .\n");
-    printf(".          .          .          .\n");
-    if(a[7]==1)
-        printf(".  Player  ");
-    else if(a[7]==2)
-        printf(". Computer ");
-    else
-        printf(".7         ");
+    //printf("..................................\n");
+    //printf(".          .          .          .\n");
+    //printf(".          .          .          .\n");
+    if(a[7]==1){
+        //printf(".  Player  ");
+        printf("p");
+    }
+    else if(a[7]==2) {
+        //printf(". Computer ");
+        printf("c");
+    }
+    else {
+        //printf(".7         ");
+        printf("n");
+    }
 
-    if(a[8]==1)
-        printf(".  Player  .");
-    else if(a[8]==2)
-        printf(". Computer .");
-    else
-        printf(".8         .");
+    if(a[8]==1) {
+        //printf(".  Player  ");
+        printf("p");
+    }
+    else if(a[8]==2) {
+        //printf(". Computer ");
+        printf("c");
+    }
+    else {
+        //printf(".8         .");
+        printf("n");
+    }
 
-    if(a[9]==1)
-        printf("  Player  .\n");
-    else if(a[9]==2)
-        printf(" Computer .\n");
-    else
-        printf("9         .\n");
+    if(a[9]==1) {
+        //printf(".  Player  ");
+        printf("p");
+    }
+    else if(a[9]==2) {
+        //printf(". Computer ");
+        printf("c");
+    }
+    else {
+        //printf("9         .\n");
+        printf("n");
+    }
 
-    printf(".          .          .          .\n");
-    printf(".          .          .          .\n");
-    printf("..................................\n\n\n");
+    //printf(".          .          .          .\n");
+    //printf(".          .          .          .\n");
+    //printf("..................................\n\n\n");
 
     //winner declaration:
 
@@ -937,13 +992,13 @@ int main()
             f=1;
     }
 
-    Sleep(150);
+    //Sleep(150);
 
     goto start;
 
     finish:
 
-        Sleep(100);
+        //Sleep(100);
 
     return 0;
 }
