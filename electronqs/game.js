@@ -15,8 +15,8 @@ function draw() {
 	rect(450, 300, x, x);
 	line(365, 50, 365, 550);
 	line(532, 50, 532, 550);
-	line(200, 217, 700, 207);
-	line(200, 384, 700, 374);
+	line(200, 217, 700, 217);
+	line(200, 384, 700, 384);
 
 
 	// draw a cross in first boxe
