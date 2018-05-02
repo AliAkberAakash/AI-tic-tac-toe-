@@ -31,12 +31,12 @@ function draw() {
 // w/h = 128
 
 function drawCross(x,y) {
-	line(x, y, x+128, y+128);
-	line(x, y+128, x+128, y);
+	line(x, y, x+125, y+125);
+	line(x, y+125, x+125, y);
 }
 
 function drawCircle(x,y) {
-	ellipse(x+64, y+64, 128, 128);
+	ellipse(x+64, y+64, 125, 125);
 }
-var boxX = {1:218, 2:385, 3:552};
-var boxY = {1:67, 2:229, 3:400};
+var boxX = {1:221, 2:387, 3:554};
+var boxY = {1:71, 2:238, 3:405};
