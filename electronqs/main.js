@@ -15,7 +15,7 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 920, height: 650, show:false})
   mainWindow.setResizable(false);
-  //mainWindow.setMenu(null);
+  mainWindow.setMenu(null);
   mainWindow.once('ready-to-show', () => {
     mainWindow.show()
   })
